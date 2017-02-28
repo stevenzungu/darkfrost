@@ -1,7 +1,6 @@
 var axios = require('axios');
 var apiKey = require('./secrets').darkskyAPIKey;
-console.log(apiKey);
-var url = `https://api.darksky.net/forecast/${apiKey}1fad293f7d4a6db586679caf8ea11720/37.8267,-122.4233`;
+var url = `https://api.darksky.net/forecast/${apiKey}/37.8267,-122.4233`;
 //var cheese = require('./sampleModule');
 //console.log(cheese);
 
