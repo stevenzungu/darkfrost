@@ -35,6 +35,20 @@
   <div id="app">
     <p>{{ message }}</p>
   </div>
+
+
+  <div id="daily">
+    <header>
+      <h4>{{ location }}</h4>
+    </header>
+      <div>
+        <h2>{{ summary }}</h2>
+        <div>
+          <img :src="iconUrl(icon)" alt="">
+        </div>
+      </div>
+  </div>
+
   <script src="js/app.js"></script>
 </body>
 </html>
