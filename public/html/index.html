@@ -5,6 +5,7 @@
   <title>DarkFrost</title>
   <link rel="stylesheet" href="css/main.css">
   <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
 
@@ -19,7 +20,7 @@
       <div>
         <h2>{{ summary }}</h2>
         <div>
-          <img src="https://placehold.it/200x200" alt="">
+          <img :src="iconUrl(icon)" alt="">
         </div>
       </div>
       <div>
