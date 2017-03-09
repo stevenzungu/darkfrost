@@ -1,0 +1,107 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DarkFrost</title>
+  <link rel="icon" href="images/logo.png" type="image/png" sizes="16x16">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <header id="top-header">
+      <h1><img src="images/purple-w.png" alt="logo"><h1>
+    </header>
+    <div id="main-container">
+    <div id="currently">
+    <header id="input-header">
+      <input type="text" placeholder="Latitude" v-model="latitude">
+      <input type="text" placeholder="Longitude" v-model="longitude">
+      <button v-on:click="updateWeather()">Update Weather</button>
+    </header>
+    <main>
+      <div>
+        <h4>{{ location }}</h4>
+        <h1>{{ Math.floor(apparentTemperature) }}&#xb0;</h1>
+      </div>
+      <div>
+        <h2>{{ summary }}</h2>
+        <div>
+          <img :src="iconUrl(icon)" alt="">
+        </div>
+      </div>
+      <div>
+        <h3>Chance of Rain: {{ Math.floor(precipProbability * 100) }}%</h3>
+        <h3>Humidity: {{ Math.floor(humidity*100)}}%</h3>
+      </div>
+    </main>
+    <footer>
+       <h5>{{ getDate(time) }}</h5>
+     </footer>
+  </div>
+  <hr>
+
+  <!--<div id="app">
+    <p>{{ message }}</p>
+  </div>-->
+
+  <div id="daily">
+    <header id="daily-header">
+      <h2>DAILY FORECAST</h2>
+      <input type="text" placeholder="Latitude" v-model="latitude">
+      <input type="text" placeholder="Longitude" v-model="longitude">
+      <button v-on:click="updateWeather()">Update</button>
+      <h3>{{ summary }}</h3>
+      <img :src="iconUrl(icon)" alt="">
+    </header>
+    <main>
+      <ul>
+        <li v-for='day in days'>
+          <img :src="iconUrl(day.icon)" alt="">  {{ getDate(day.time) }} || High: {{Math.floor(day.apparentTemperatureMax)}}&#xb0; || Lo: {{Math.floor(day.apparentTemperatureMin)}}&#xb0; || Chance of Rain: {{ Math.floor(day.precipProbability * 100) }}%
+        </li>
+      </ul>
+    </main>
+  </div>
+  <hr>
+  <div id="hourly">
+      <header id="hourly-header">
+          <h2>HOURLY FORECAST</h2>
+          <input type="text" placeholder="Latitude" v-model="latitude">
+          <input type="text" placeholder="Longitude" v-model="longitude">
+          <button v-on:click="updateWeather()">Update</button>
+          <h3>{{summary}}</h3>
+        <img :src="getMainIcon()" alt="">
+      </header>
+      <main>
+        <ul>
+          <li v-for='hour in hours'>
+            <img :src="getHourlyIcon(hour.icon)" alt="">   {{ getDate(hour.time) }} || {{ hour.summary }}  ||  Temp: {{ Math.floor(hour.apparentTemperature) }}&#xb0;
+          </li>
+        </ul>
+      </main>
+  </div>
+  <hr>
+  <div id="minutely">
+    <header id="minutely-header">
+      <h2>MINUTELY FORECAST</h2>
+      <input type="text" placeholder="Latitude" v-model="latitude">
+      <input type="text" placeholder="Longitude" v-model="longitude">
+      <button v-on:click="updateWeather()">Update</button>
+      <h3>{{ summary }}</h3>
+      <!--<img :src="iconUrl(icon)" alt="">-->
+      <img :src="getMainIcon()" alt=" ">
+    </header>
+    <main>
+      <ul>
+        <li v-for='minute in minutes'>
+             {{ getDate(minute.time) }} || Chance of Rain: {{ Math.floor(minute.precipProbability * 100) }}%
+
+        </li>
+      </ul>
+    </main>
+</div>
+  <script src="js/app.js"></script>
+</body>
+</html>

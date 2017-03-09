@@ -1,0 +1,247 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  background-color: whitesmoke;
+}
+
+#daily, #hourly, #minutely{
+
+  padding-top: 25px;
+}
+
+li {
+  list-style: none;
+  font-size: 25px;
+  font-family: helvetica, sans-serif;;
+  color: dimgray;
+  text-align: left;
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 12px;
+  padding-top: 12px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+li:first-of-type {
+  border-top: 1px solid lightgrey;
+}
+li:last-of-type {
+  border-bottom: none;
+}
+
+#top-header {
+  height: 90px;
+  background-color: #337ab7;
+
+}
+
+#top-header h1 {
+  text-align: center;
+  margin: 0;
+
+}
+#top-header img {
+  height: 60px;
+  margin: 15px;
+
+}
+input {
+  padding: 20px;
+  font-size: 18px;
+  margin-right: 25px;
+  background-color: #3CBC8D;
+  color: white;
+  border: none;
+  width: 100px;
+}
+input::placeholder {
+  color: white;
+}
+button {
+  background-color: #B72788;
+  /*#CC2067;*/
+  padding: 20px;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-align: center;
+  text-decoration: none;
+}
+button:hover {
+  background-color: #C959A3;
+  /*#FF2881;*/
+  color: #00ced1;
+}
+
+ul img {
+  vertical-align: middle;
+}
+
+form {
+  text-align: center;
+  margin-bottom: 75px;
+  padding-top: 50px;
+}
+#main-container {
+  width: 80%;
+  margin: 0 auto;
+}
+li img {
+  height: 50px;
+}
+#hourly-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+#hourly-header h2 {
+  font-size: 45px;
+  font-family: helvetica, sans-serif;;
+  color: 	#B72788;
+  /*#2f4f4f;*/
+  letter-spacing: 1px;
+  word-spacing: 5px;
+  font-weight: 200;
+  margin-bottom: 40px;
+}
+#hourly-header h3
+{
+  font-size: 25px;
+  font-family: helvetica, sans-serif;;
+  color: dimgray;
+  font-weight: 300;
+}
+ul{
+  padding: 0px 75px;
+  margin-bottom: 60px;
+}
+#currently {
+  text-align: center;
+  font-family: helvetica, sans-serif;;
+  color: #2f4f4f;
+}
+#currently h1 {
+  font-weight: 200;
+  font-size: 80px;
+  letter-spacing: 1px;
+  color: #B72788;
+  /*#C959A3;*/
+  /*#B72788;*/
+  /*#27AAC5;*/
+  margin-bottom: 20px;
+  margin-top: 25px;
+}
+#currently h2 {
+  font-weight: 200;
+  font-size: 40px;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+#currently h3 {
+  font-weight: 200;
+  font-size: 30px;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+#currently h4 {
+  font-weight: 300;
+  font-size: 25px;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+}
+#currently h5 {
+  font-size: 20px;
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+#main-container {
+  background-color: white;
+}
+#currently {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+hr {
+  border-top: 1px dashed lightgrey;
+  width: 85%;
+}
+#daily {
+  padding-top: 25px;
+}
+#daily-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+#daily-header h2 {
+  font-size: 50px;
+  font-family: helvetica, sans-serif;;
+  color: 	#B72788;
+  /*#2f4f4f;*/
+  letter-spacing: 1px;
+  word-spacing: 5px;
+  font-weight: 200;
+  margin-bottom: 40px;
+}
+#daily-header h3
+{
+  font-size: 25px;
+  font-family: helvetica, sans-serif;;
+  color: dimgray;
+  font-weight: 300;
+}
+#minutely {
+  padding-top: 25px;
+}
+#minutely-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+#minutely-header h2 {
+  font-size: 45px;
+  font-family: helvetica, sans-serif;;
+  color: 	#B72788;
+  /*#2f4f4f;*/
+  letter-spacing: 1px;
+  word-spacing: 5px;
+  font-weight: 200;
+  margin-bottom: 40px;
+}
+#minutely-header h3
+{
+  font-size: 25px;
+  font-family: helvetica, sans-serif;;
+  color: dimgray;
+  font-weight: 300;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: white;
+  font-weight: 100;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: white;
+  font-weight: 100;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: white;
+  font-weight: 100;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: white;
+  font-weight: 100;
+}
+#daily-header h3 {
+  padding-top: 40px;
+  padding-bottom: 10px;
+}
+#hourly-header h3 {
+  padding-top: 40px;
+  padding-bottom: 10px;
+}
+#minutely-header h3 {
+  padding-top: 40px;
+  padding-bottom: 10px;
+}
